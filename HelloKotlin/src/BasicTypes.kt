@@ -19,4 +19,22 @@ val aShort:Short = 4
 
 val aByte:Byte = Byte.MAX_VALUE
 
+val aChar:Char = '0'
+
+
+val string:String = "He"
+val string2:String = String(charArrayOf('H','e'))
+
+fun main(args:Array<String>){
+    println(aChar)
+    println(string)
+    println(string2)
+    //比较值
+    println(string==string2)
+    //比较对象的引用值
+    println(string===string2)
+
+
+}
+
 
