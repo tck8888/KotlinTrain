@@ -21,10 +21,19 @@ const val jsonStr1 = """
 }
 """
 
+val json="""
+    {"subjectCode":"5f14637247fc48038cba208ca2c0471c16","id":9350,"refresh":true}
+""".trimIndent()
+
+class User(val subjectCode:String,val id:String?,val refresh:Boolean)
 fun main() {
 
     val alpha = 254 shr 16
     println("alpha:${alpha.toByte()}")
+    val fromJson = Gson().fromJson(json, User::class.java)
+    println(fromJson.id)
+    println(fromJson.subjectCode)
+    println(fromJson.refresh)
 }
 
 //fun argb(alpha: Int, red: Int, green: Int, blue: Int):Int {
