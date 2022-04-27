@@ -1,5 +1,9 @@
 package com.tck.kotlintrain.juc.atomic
 
+import java.util.concurrent.BlockingDeque
+import java.util.concurrent.ConcurrentHashMap
+import java.util.concurrent.CopyOnWriteArrayList
+import java.util.concurrent.CountDownLatch
 import java.util.concurrent.atomic.AtomicInteger
 
 /**
@@ -46,5 +50,4 @@ fun main() {
 
     println("basicCount:${AtomicIntegerDemo1.basicCount}")
     println("atomicInteger:${AtomicIntegerDemo1.atomicInteger.get()}")
-
 }
